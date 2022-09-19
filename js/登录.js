@@ -174,7 +174,7 @@ function Account(){
 								localStorage.setItem('是否记住密码',isrember_);
 							}
 							alert('登录成功');
-							window.localStorage.href='大作业.html'
+							document.location.href='index.html'
 						}else{
 							alert('用户名或密码输入不正确')
 						}
