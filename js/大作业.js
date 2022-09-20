@@ -1,10 +1,10 @@
-var mySwiper = new Swiper ('.swiper', {
+var mySwiperOne = new Swiper ('#swiperOne', {
     direction: 'horizontal', // 垂直切换选项
     loop: true, // 循环模式选项
     
     // 如果需要分页器
     pagination: {
-      el: '.swiper-pagination',
+      el: '#swpOne',
 	  clickable :true,//点击小点，跳转图片
 	  // dynamicBullets: true,//小点多时，使中间的突出放大
 	  //使分页器显示文字
@@ -22,8 +22,8 @@ var mySwiper = new Swiper ('.swiper', {
     
     // 如果需要前进后退按钮
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '#swiper-button-next_one',
+      prevEl: '#swiper-button-prev_one',
     },
     
 	 autoplay:true,//等同于以下设置
@@ -32,4 +32,30 @@ var mySwiper = new Swiper ('.swiper', {
 
 	    disableOnInteraction: true//点击页面暂停移动
 	    },
-  })        
+  })
+  var mySwiperTwo = new Swiper ('#swiperTwo', {
+    direction: 'horizontal', // 垂直切换选项
+    loop: true, // 循环模式选项
+	//几个为一组
+    slidesPerView : 4,
+	//每组的间隔
+    spaceBetween : 50,
+	
+
+    // 如果需要分页器
+    pagination: {
+      el: '#swpTwo',
+	  clickable :true,
+    },
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '#swiper-button-next_two',
+      prevEl: '#swiper-button-prev_two',
+    },
+	autoplay:true,//等同于以下设置
+	  autoplay: {
+	    delay: 2000,
+
+	    disableOnInteraction: true//点击页面暂停移动
+	    },
+  })                
