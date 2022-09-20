@@ -50,7 +50,7 @@ function Account(){
 		var span_tips_1=document.getElementsByClassName('span_tips_1')[0];
 		//正则表达式，不能输入汉字与空格，6~16位
 		var reg=/^[^\u4e00-\u9fa5 ]{6,16}$/;
-		if(!reg.test(input_user.value) || input_user.value.toLowerCase().includes('administrator')){
+		if(!reg.test(input_user.value)){
 		     //如果不满足条件，则在span标签输出
              span_tips_1.innerHTML='用户名为6~16位，不得有汉字与空格'; 
 			 return false
@@ -178,11 +178,6 @@ function Account(){
 						}else{
 							alert('用户名或密码输入不正确')
 						}
-						console.log(user_);
-						console.log(psd_);
-						console.log(json_.user);
-						console.log(json_.psd);
-						
 					}
 			
 				}
