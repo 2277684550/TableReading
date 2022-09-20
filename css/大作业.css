@@ -26,26 +26,37 @@ body{
 	background-color: #bc0000;
 	color: aliceblue;
 }
-.swiper {
+#swiperOne{
 	width: 700px;
 	--swiper-theme-color: #bc0000;/* 设置Swiper风格 */
 	--swiper-navigation-color: #9ca1a1;/* 单独设置按钮颜色 */
-	--swiper-navigation-size: 40px;/* 设置按钮大小 */
+	--swiper-navigation-size: 40px;/*设置按钮大小*/
 	}
-.swiper-slide img{
+#swiperOne .swiper-slide img{
 	width: 100%;
 }
-.swiper-pagination{
-	width: 200px;
+#swpOne{
+	width: 700px;
 	height: 30px;;
 	display: flex;
 	flex-direction: row;
 
 }
-.swiper-pagination span{
+#swpOne span{
 	line-height: 30px;
 	width: 25%;
 	border-radius: 0;
 	height: 100%;
 	color: aliceblue;
+}
+#swiperTwo{
+	width: 400px;
+	height: 200px;
+	
+	--swiper-theme-color: #bc0000;/* 设置Swiper风格 */
+	--swiper-navigation-color: #9ca1a1;/* 单独设置按钮颜色 */
+	--swiper-navigation-size: 20px;/*设置按钮大小*/
+}
+#swiperTwo img{
+	margin-top: 50px;
 }
