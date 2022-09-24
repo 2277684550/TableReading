@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	min-width: 1471px;
+	position: relative;
+}
+#myBook{
+	position: absolute;
+	right: 10%;
+	top: 50px;
+	display: block;
+	width: 130px;
+	height: 40px;
+	border: 1px solid #9ca1a1;
+	box-sizing: border-box;
+	line-height: 40px;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+}
+#myBook:hover{
+	border: none;
+	background-color: #bc0000;
+	color: aliceblue;
+}
+#swiperOne{
+	width: 700px;
+	--swiper-theme-color: #bc0000;/* 设置Swiper风格 */
+	--swiper-navigation-color: #9ca1a1;/* 单独设置按钮颜色 */
+	--swiper-navigation-size: 40px;/*设置按钮大小*/
+	}
+#swiperOne .swiper-slide img{
+	width: 100%;
+}
+#swpOne{
+	width: 700px;
+	height: 30px;;
+	display: flex;
+	flex-direction: row;
+
+}
+#swpOne span{
+	line-height: 30px;
+	width: 25%;
+	border-radius: 0;
+	height: 100%;
+	color: aliceblue;
+}
+#swiperTwo{
+	width: 400px;
+	height: 200px;
+	
+	--swiper-theme-color: #bc0000;/* 设置Swiper风格 */
+	--swiper-navigation-color: #9ca1a1;/* 单独设置按钮颜色 */
+	--swiper-navigation-size: 20px;/*设置按钮大小*/
+}
+#swiperTwo img{
+	margin-top: 50px;
+}

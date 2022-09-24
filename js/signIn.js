@@ -1,3 +1,33 @@
+//判断时pc还是phone
+function browserRedirect() {
+var curURL = window.location.href;
+var sUserAgent = navigator.userAgent.toLowerCase();
+var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+var bIsAndroid = sUserAgent.match(/android/i) == "android";
+var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+    // 移动端浏览器 
+    console.log('phone');
+    //移动端浏览器
+    var head = document.getElementsByTagName('head')[0];
+	head.innerHTML = '';
+	head.innerHTML = '<link rel="stylesheet" href="./css/signIn-Phone.css">'
+   
+} else {
+    // PC端浏览器
+    console.log('pc');
+    var head = document.getElementsByTagName('head')[0];
+	head.innerHTML = '';
+    head.innerHTML = '<link rel="stylesheet" href="./css/signIn-Pc.css">'
+    }
+}
+
+browserRedirect()
 //创建一个form标签，并追加到Login_box因为每一次点击其他登录，会删除
 //form，即账号登录，所以每一次点击账号登录都得重新创建form标签，
 //为防止代码重复，用函数封装起来，方便调用
@@ -154,7 +184,7 @@ function Account(){
 		// 的输入框输入有误事件，即弹出提示栏，此时成功输入正确格式才能登录成功
 		if(input_user.onblur()&&input_psd.onblur()){
 			var ajax_=new XMLHttpRequest || new ActiveXObject('Microsoft.XMLHTTP');
-			ajax_.open('get','./数据.json',true);
+			ajax_.open('get','./data.json',true);
 			ajax_.send();
 			ajax_.onreadystatechange=function(){
 				if(ajax_.readyState==4){
